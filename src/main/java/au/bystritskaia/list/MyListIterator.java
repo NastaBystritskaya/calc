@@ -2,10 +2,13 @@ package au.bystritskaia.list;
 
 import lombok.RequiredArgsConstructor;
 
-import javax.swing.text.html.HTMLDocument;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * Итератор моей коллекции
+ * @param <T> Тип элементов коллекции
+ */
 @RequiredArgsConstructor
 public class MyListIterator<T> implements Iterator<T> {
 

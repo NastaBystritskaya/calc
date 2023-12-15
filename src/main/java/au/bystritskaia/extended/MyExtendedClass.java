@@ -7,19 +7,37 @@ import lombok.experimental.FieldDefaults;
 
 import java.io.DataInput;
 import java.io.InputStream;
-import java.util.Date;
 
+/**
+ * Обощенный класс
+ * @param <T> 1 Обопщение
+ * @param <V> 2 Обопщение
+ * @param <K> 3 Обопщение
+ */
 @RequiredArgsConstructor
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class MyExtendedClass <T extends Comparable, V extends InputStream & DataInput, K extends Number> {
 
+    /**
+     * Первый параметр
+     */
     T t;
 
+    /**
+     * Второй параметр
+     */
     V v;
 
+    /**
+     * Третий параметр
+     */
     K k;
 
+    /**
+     * Вывод типов параметров
+     * @return Строка с типами
+     */
     public String printTypes() {
        return """
                 T : %s
@@ -31,7 +49,4 @@ public class MyExtendedClass <T extends Comparable, V extends InputStream & Data
                        this.k.getClass().getSimpleName()
                );
     }
-
-
-
 }
